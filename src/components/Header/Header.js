@@ -4,7 +4,7 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
       <div className="container-fluid">
         {/* name and brand ----------------------------------------------------------------
         -------------------------------------------------------*/}
@@ -41,12 +41,12 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="about">
+              <Link className="nav-link" to="/about">
                 About
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="signIn">
+              <Link className="nav-link" to="/signIn">
                 Sign In
               </Link>
             </li>
