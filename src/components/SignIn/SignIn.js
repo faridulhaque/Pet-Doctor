@@ -1,14 +1,35 @@
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import React from "react";
 import { Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { auth } from "../../Firebase/firebase.init";
 import "../CommonStyles/CommonStyles.css";
 import './SignIn.css';
+const provider = new GoogleAuthProvider();
 
 const SignIn = () => {
+  const navigate = useNavigate();
+  // function for sign in with email and password --------------------------------------------------------------------------------------------------------------------started
     const handleSignInForm = (e) =>{
         e.preventDefault();
         console.log('hello world');
     }
+    // function for sign in with email and password done--------------------------------------------------------------------------------------------------------------------done
+
+    // -------------------------------------
+
+    // function for sign in with google popup  started--------------------------------------------------------------------------------------------------------------------started
+    const signInWithGoogle = () =>{
+      signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user;
+        navigate('/')
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+      });
+    }
+    // function for sign in with google popup  ended--------------------------------------------------------------------------------------------------------------------ended
   return (
     <div className="signIn">
       <div className="form-wrapper">
@@ -40,7 +61,7 @@ const SignIn = () => {
             <div style={{marginTop: '7px', padding: '0 5px'}}>or</div>
             <div style={{borderTop: '1px solid black', width: '125px', marginTop: '20px'}}></div>  
           </div>
-          <button className='btn btn-danger w-100 mt-3'>Sign in with Google</button>
+          <button onClick={signInWithGoogle} className='btn btn-danger w-100 mt-3'>Sign in with Google</button>
         </Form>
       </div>
     </div>

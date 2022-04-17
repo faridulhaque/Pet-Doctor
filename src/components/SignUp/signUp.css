@@ -30,3 +30,13 @@
     background-color: white !important;
     
 }
+.small-text{
+    color: white;
+}
+.small-text a{
+    color: white;
+    text-decoration: none;
+}
+.small-text a:hover{
+    color: red;
+}
