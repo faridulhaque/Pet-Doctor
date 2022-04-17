@@ -1,0 +1,61 @@
+.services-h2{
+    text-align: center;
+}
+
+.services{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+   
+
+}
+.service-img{
+    width: 240px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.service-card{
+    width: 250px;
+    height: 375px;
+    position: relative;
+    background-color: white;
+    border: 0.5px solid rgb(32, 32, 32);
+    
+    
+    box-sizing: border-box;
+    
+    
+}
+.service-button{
+    position: absolute;
+    bottom: 10px;
+}
+/* codes for responsive  */
+@media only screen and (max-width: 570px) {
+    
+    .services{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+        
+       
+    
+    }
+    .service-img{
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 20px;
+    }
+    .service-card{
+        width: 90%;
+        margin-left: 5%;
+        height: 450px;
+        grid-row-gap: 50px;
+    }
+    .service-button{
+        position: absolute;
+        bottom: 25px;
+    }
+  }

@@ -1,12 +1,12 @@
-img{
+.banner-img{
     width: 100%;
     margin-left: 0;
 }
-.container{
+.banner{
     margin-top: 60px;
     position: relative;
 }
-.container h2, p, .button{
+.banner .banner-h2, .banner-p, .button{
     text-align: center;
     left: 0;
     right: 0;
@@ -15,18 +15,18 @@ img{
     color: white;
     
 }
-.container h2{
+.banner .banner-h2{
     top: 250px;
     font-size: 36px;
 }
-.container p{
+.banner .banner-p{
     top: 300px;
     font-size: 20px;
     text-align: center;
     width: 80%;
     margin-left: 10%;
 }
-.container .button{
+.banner .button{
     background-color: white;
     width: 200px;
     color: black;
@@ -36,24 +36,24 @@ img{
     border: none;
     border-radius: 5px;
 }
-.container .button:hover{
+.banner .button:hover{
     box-shadow: 4px 4px -4px -4px greenyellow;
 }
 /* responsive banner */
 @media only screen and (max-width: 600px) {
     
-    .container h2{
+    .banner .banner-h2{
         top: 40px;
-        font-size: 24px;
+        font-size: 22px;
         
     }
-    .container p{
+    .banner .banner-p{
         top: 80px;
         font-size: 12px;
         
     }
     
-    .container .button{
+    .banner .button{
         top: 130px;
         
     }

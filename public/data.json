@@ -1,19 +1,19 @@
 [
     {
       "id": "1",
-      "img": "",
+      "img": "./clinic.png",
       "service": "Clinic",
       "comment": "I run a small clinic where pets with critical problems can stay and get better treatment!"
     },
     {
       "id": "2",
-      "img": "",
+      "img": "./home.png",
       "service": "Home",
       "comment": "I bring my services at your door if you are not able to bring your pet to me!"
     },
     {
       "id": "3",
-      "img": "",
+      "img": "./online.png",
       "service": "Online",
       "comment": "I provide general advices via video call as well!"
     }
