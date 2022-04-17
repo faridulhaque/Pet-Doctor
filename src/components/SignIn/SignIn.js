@@ -12,6 +12,7 @@ const SignIn = () => {
   return (
     <div className="signIn">
       <div className="form-wrapper">
+        <h2>Sign In to continue</h2>
         <Form onSubmit={handleSignInForm}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
@@ -25,13 +26,21 @@ const SignIn = () => {
             <Form.Label>Password</Form.Label>
             <Form.Control type="password" placeholder="Password" />
           </Form.Group>
-          <Link to="/signUp">Already have an account?</Link>
+          <small>Already have an account?{" "}<Link to="/signUp">Click here</Link></small>
+          
           {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
             <Form.Check type="checkbox" label="Already have an account?" />
           </Form.Group> */}
-          <Button variant="primary" type="submit">
+          <br/>
+          <Button className='mt-3' variant="primary" type="submit">
             Sign In
           </Button>
+          <div className='breaking-line'>
+            <div style={{borderTop: '1px solid black', width: '125px', marginTop: '20px'}}></div>
+            <div style={{marginTop: '7px', padding: '0 5px'}}>or</div>
+            <div style={{borderTop: '1px solid black', width: '125px', marginTop: '20px'}}></div>  
+          </div>
+          <button className='btn btn-danger w-100 mt-3'>Sign in with Google</button>
         </Form>
       </div>
     </div>

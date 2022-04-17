@@ -8,7 +8,7 @@ const Header = () => {
       <div className="container-fluid">
         {/* name and brand ----------------------------------------------------------------
         -------------------------------------------------------*/}
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand ms-4" to="/">
           Pet Doctor
         </Link>
 
