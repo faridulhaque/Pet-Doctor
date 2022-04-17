@@ -1,8 +1,10 @@
 import React from 'react';
+import './Blog.css';
 
 const Blog = () => {
+    
     return (
-        <section className='container' style={{height: 500, marginTop: 120}}>
+        <section className='container blog'>
             <div>
                 <h3>Difference between authorization and authentication</h3>
                 <p></p>
