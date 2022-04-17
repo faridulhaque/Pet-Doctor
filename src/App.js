@@ -8,6 +8,8 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import NotFound from './components/NoFound/NotFound';
 import SignIn from './components/SignIn/SignIn';
+import SignUp from './components/SignUp/SignUp';
+
 
 function App() {
   return (
@@ -15,7 +17,7 @@ function App() {
       <Header></Header>
       <Routes>
           <Route path="/" element={<Home></Home>}></Route>
-          <Route path="/signUp" element></Route>
+          <Route path="/signUp" element={<SignUp></SignUp>}></Route>
           <Route path="/signIn" element={<SignIn></SignIn>}></Route>
           <Route path="/blog" element={<Blog></Blog>}></Route>
           <Route path="/about" element={<About></About>}></Route>
