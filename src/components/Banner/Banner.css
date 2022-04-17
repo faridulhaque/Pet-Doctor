@@ -1,0 +1,60 @@
+img{
+    width: 100%;
+    margin-left: 0;
+}
+.container{
+    margin-top: 60px;
+    position: relative;
+}
+.container h2, p, .button{
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    color: white;
+    
+}
+.container h2{
+    top: 250px;
+    font-size: 36px;
+}
+.container p{
+    top: 300px;
+    font-size: 20px;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+}
+.container .button{
+    background-color: white;
+    width: 200px;
+    color: black;
+    padding: 5px 10px;
+    top: 380px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+}
+.container .button:hover{
+    box-shadow: 4px 4px -4px -4px greenyellow;
+}
+/* responsive banner */
+@media only screen and (max-width: 600px) {
+    
+    .container h2{
+        top: 40px;
+        font-size: 24px;
+        
+    }
+    .container p{
+        top: 80px;
+        font-size: 12px;
+        
+    }
+    
+    .container .button{
+        top: 130px;
+        
+    }
+  }
