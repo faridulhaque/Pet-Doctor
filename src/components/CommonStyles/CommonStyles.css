@@ -1,6 +1,6 @@
 /* this file has some common styles for different components like Blog, About, Sign in and the Sign up page.  */
 
-.blog, .about, .signIn, .signUp{
+.blog, .about, .signIn, .signUp, .noFound, .service-detail{
     height: 100vh;
     margin-top: 120px;
 }

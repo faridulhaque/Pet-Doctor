@@ -1,8 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import {onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "../../Firebase/firebase.init";
 
 const Header = () => {
+  // using useEffect and useState to find logged in user
+  const [user, setUser] = useState({});
+ useEffect(()=>{
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      
+      setUser(user);
+      
+    } else {
+      setUser({});
+    }
+  });
+ }, []);
+
+//  signing out the user 
+const makeSignOut = () =>{
+  signOut(auth).then(() => {
+    // Sign-out successful.
+  }).catch((error) => {
+    // An error happened.
+  });
+}
+
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
       <div className="container-fluid">
@@ -46,10 +72,14 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/signIn">
+              {
+                user.uid ? <div className="div-btn"> <button className="nav-signOut" onClick={makeSignOut}>Sign Out</button> </div> : <Link className="nav-link" to="/signIn">
                 Sign In
               </Link>
+              }
+              
             </li>
+            
           </ul>
         </div>
 

@@ -2,17 +2,34 @@ import React from "react";
 import "./signUp.css";
 import "../CommonStyles/CommonStyles.css";
 import { Link, useNavigate } from "react-router-dom";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
 import { auth } from "../../Firebase/firebase.init";
 
 const provider = new GoogleAuthProvider();
 
 const SignUp = () => {
-  const navigate= useNavigate();
+  const navigate = useNavigate();
   // function for sign up/register with email and password --------------------------------------------------------------------------------------------------------------------started
   const handleSignUp = (e) => {
     e.preventDefault();
-    console.log("hello sign up");
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(email, password);
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log(user);
+        navigate("/");
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        console.log(errorMessage);
+      });
   };
   // function for sign up/register with email and password done--------------------------------------------------------------------------------------------------------------------done
 
@@ -21,7 +38,7 @@ const SignUp = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         const user = result.user;
-        navigate('/')
+        navigate("/");
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -51,29 +68,29 @@ const SignUp = () => {
             <div className="input-container">
               <input
                 className="input-box"
-                type="email"
-                name="email"
-                id="email"
+                type="password"
+                name="password"
+                id="password"
               />
             </div>
           </div>
-          <div className="input-group">
+          {/* <div className="input-group">
             <label htmlFor="password">Confirm Password</label>
             <br />
             <div className="input-container">
               <input
                 className="input-box"
-                type="email"
-                name="email"
-                id="email"
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
               />
             </div>
-          </div>
+          </div> */}
           <button type="submit" className="btn btn-white w-100 mt-3">
             Sign up
           </button>
           <small className="small-text mt-2">
-            New here? <Link to="/signIn">Sign In</Link>
+            Already have an account? <Link to="/signIn">Sign In</Link>
           </small>
           <br />
           <div className="breaking-line">

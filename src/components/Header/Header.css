@@ -1,0 +1,12 @@
+.div-btn{
+    display: flex;
+    height: 100%;
+}
+.nav-signOut{
+    background-color: white;
+    border: none;
+    color: rgb(13, 110, 253);
+    padding: auto;
+    border-radius: 5px;
+    align-items: center;
+}
