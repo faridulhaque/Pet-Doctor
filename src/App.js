@@ -12,6 +12,8 @@ import SignIn from './components/SignIn/SignIn';
 import SignUp from './components/SignUp/SignUp';
 import RequireAuth from './RequireAuth/RequireAuth';
 import { Toaster } from 'react-hot-toast';
+import RequireAuth2 from './RequireAuth2/RequireAuth2';
+
 
 
 
@@ -24,12 +26,13 @@ function App() {
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/signUp" element={<SignUp></SignUp>}></Route>
           <Route path="/signIn" element={<SignIn></SignIn>}></Route>
+          
           <Route path="/blog" element={<Blog></Blog>}></Route>
           <Route path="/about" element={<About></About>}></Route>
           
-          <Route path="/home/:serviceDetail" element={<RequireAuth>
+          <Route path="/home/:serviceDetail" element={<RequireAuth2>
             <ServiceDetail></ServiceDetail>
-          </RequireAuth>}></Route>
+          </RequireAuth2>}></Route>
           
           
           <Route path="*" element={<NotFound></NotFound>}></Route>
