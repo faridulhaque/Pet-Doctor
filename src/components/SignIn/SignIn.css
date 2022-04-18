@@ -7,3 +7,10 @@
     display: flex;
     
 }
+.button-fp{
+    border: none;
+    background-color: white;
+    text-decoration: none;
+    color: red;
+
+}

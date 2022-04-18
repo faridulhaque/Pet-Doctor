@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
 import {onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../Firebase/firebase.init";
 
 const Header = () => {
+  const navigate = useNavigate();
   // using useEffect and useState to find logged in user
   const [user, setUser] = useState({});
  useEffect(()=>{
@@ -22,7 +23,9 @@ const Header = () => {
 //  signing out the user 
 const makeSignOut = () =>{
   signOut(auth).then(() => {
+    navigate('/signIn');
     // Sign-out successful.
+
   }).catch((error) => {
     // An error happened.
   });
