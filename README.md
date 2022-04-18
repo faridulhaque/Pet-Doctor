@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+## Pets Doctor 
+Live link [Pets Doctor](https://assignment10-petsdoctor.web.app/)
+* This project is based on a private vet who provides treatment for pets.
+* The project has 4 main pages Home, Blog, About and Sign In. 
+* The Home page contains a banner in the top, three cards in the middle where services about the doctor are described, a section containing some upcoming offer in the last row. 
+* The about page has the answers of the questions provided by PH and in the Bog page some information about me. 
+* In the Middle of the home page some cards which contained three button on each of them will take you to the dynamic pages. 
+* There are Sign in page and also a sign up page which you can visit by clicking sign up button in the sign in page. 
+* I use vanilla bootstrap and React Router for the project. Also took some help from hotToast and react firebase hook.  
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
