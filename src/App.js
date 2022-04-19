@@ -10,7 +10,7 @@ import NotFound from './components/NoFound/NotFound';
 import ServiceDetail from './components/ServiceDetail/ServiceDetail';
 import SignIn from './components/SignIn/SignIn';
 import SignUp from './components/SignUp/SignUp';
-import RequireAuth from './RequireAuth/RequireAuth';
+
 import { Toaster } from 'react-hot-toast';
 import RequireAuth2 from './RequireAuth2/RequireAuth2';
 
